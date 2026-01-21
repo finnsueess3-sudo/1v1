@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stickman Fight</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="menu">
+  <input id="room" placeholder="Raumcode">
+  <button onclick="join()">Join</button>
+</div>
+
+<canvas id="game"></canvas>
+
+<div id="pinBox">
+  <input id="pin" placeholder="PIN">
+  <button onclick="unlock()">Unlock</button>
+</div>
+
+<div id="mobile">
+  <button ontouchstart="keys.a=true" ontouchend="keys.a=false">◀</button>
+  <button ontouchstart="keys.d=true" ontouchend="keys.d=false">▶</button>
+  <button ontouchstart="shoot()">🔫</button>
+  <button ontouchstart="kick()">🦶</button>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="game.js"></script>
+<script src="controls.js"></script>
+</body>
+</html>
